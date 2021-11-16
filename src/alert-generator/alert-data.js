@@ -29,7 +29,7 @@ export const weatherTitles = [
   "Earthquake",
 ];
 
-export const levels = ["critical", "normal", , "normal", , "normal"];
+export const levels = ["critical", "normal", "normal", "normal"];
 
 export const location = [
   "Memphis, TN",
