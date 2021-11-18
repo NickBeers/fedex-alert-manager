@@ -51,8 +51,8 @@ export default function HistoricDataGrid() {
         rows={alerts.filter((a) => a.resolved)}
         columns={columns}
         pageSize={50}
+        bulkActionButtons={false}
         // rowsPerPageOptions={[100]}
-        checkboxSelection
         disableSelectionOnClick
       />
     </div>
