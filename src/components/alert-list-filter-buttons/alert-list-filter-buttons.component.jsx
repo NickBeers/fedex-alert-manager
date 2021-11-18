@@ -12,7 +12,7 @@ import store from "../../store/configureStore";
 import * as alerts from "../../store/alerts.js";
 import * as ui from "../../store/ui.js";
 
-const filterAlerts = (e, uiState, alertsList) => {
+const filterAlerts = (e) => {
   // Set the filter value
   store.dispatch(
     ui.alertFilter({
@@ -21,34 +21,33 @@ const filterAlerts = (e, uiState, alertsList) => {
   );
 
   // Change the index of selected alert if in filter
-  const currentIdx = uiState.index;
-  // console.log(currentIdx);
-  const unresolvedAlerts = alertsList
-    .filter((a) => !a.resolved)
-    .filter((a) =>
-      uiState.filter === "all" ? a : a.alertClass === uiState.filter
-    )
-    .sort((a, b) => (a.critical === b.critical ? 0 : b.critical ? 1 : -1));
-  const alertsLength = unresolvedAlerts.length;
-  const newIdx = unresolvedAlerts.indexOf((a) => a.id === uiState.id);
-  console.log(newIdx);
+  // const currentIdx = uiState.index;
+  // // console.log(currentIdx);
+  // const unresolvedAlerts = alertsList
+  //   .filter((a) => !a.resolved)
+  //   .filter((a) =>
+  //     uiState.filter === "all" ? a : a.alertClass === uiState.filter
+  //   )
+  //   .sort((a, b) => (a.critical === b.critical ? 0 : b.critical ? 1 : -1));
+  // const alertsLength = unresolvedAlerts.length;
+  // const newIdx = unresolvedAlerts.indexOf((a) => console.log(a));
 
-  console.log(alertsLength);
-  if (alertsLength > 0) {
-    store.dispatch(
-      ui.alertSelected({
-        ...unresolvedAlerts[newIdx],
-        index: newIdx,
-      })
-    );
-  } else {
-    // If alertList is empty, set index to -1
-    store.dispatch(
-      ui.alertSelected({
-        index: -1,
-      })
-    );
-  }
+  // if (alertsLength > 0) {
+  //   console.log(alertsLength);
+  //   store.dispatch(
+  //     ui.alertSelected({
+  //       ...unresolvedAlerts[newIdx],
+  //       index: newIdx,
+  //     })
+  //   );
+  // } else {
+  //   // If alertList is empty, set index to -1
+  //   store.dispatch(
+  //     ui.alertSelected({
+  //       index: -1,
+  //     })
+  //   );
+  // }
 };
 
 // const resolveAlert = (event, alertState, alertsList) => {
@@ -104,7 +103,7 @@ export default function AlertListFilterButtons() {
       }}
     >
       <IconButton
-        onClick={(event) => filterAlerts(event, uiState, alertsList)}
+        onClick={(event) => filterAlerts(event)}
         sx={{ width: 25, height: 25, top: "12px", left: "5%" }}
       >
         <Avatar

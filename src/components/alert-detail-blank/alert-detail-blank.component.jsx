@@ -6,11 +6,12 @@ import Typography from "@material-ui/core/Typography";
 import { withStyles } from "@material-ui/core/styles";
 import { useSelector } from "react-redux";
 
-const GreyTextTypography = withStyles({
-  root: {
-    color: "grey",
-  },
-})(Typography);
+// const GreyTextTypography = withStyles({
+//   root: {
+//     color: "grey",
+
+//   },
+// })(Typography);
 
 export default function AlertDetailBlank() {
   const alert = useSelector((state) => state.ui);
@@ -32,9 +33,7 @@ export default function AlertDetailBlank() {
             justifyContent: "center",
           }}
         >
-          <GreyTextTypography sx={{ display: "flex", color: "red" }}>
-            no alert selected
-          </GreyTextTypography>
+          <p sx={{ display: "flex", color: "grey" }}>no alert selected</p>
         </Box>
       </Container>
     </React.Fragment>
