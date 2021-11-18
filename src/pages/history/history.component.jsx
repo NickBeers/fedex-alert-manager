@@ -6,7 +6,7 @@ import "./history.styles.scss";
 
 const History = () => (
   <div className="history">
-    <HistoricDataGrid bulkActionButtons={false} />
+    <HistoricDataGrid />
   </div>
 );
 
