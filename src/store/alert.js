@@ -9,11 +9,15 @@ const slice = createSlice({
       alert.id = v4();
       alert.title = action.payload.title;
       alert.body = action.payload.body;
-      alert.isCritical = action.payload.isCritical;
+      alert.critical = action.payload.critical;
       alert.location = action.payload.location;
-      alert.timestamp = new Date();
+      alert.timestamp = new Date().toString();
       alert.alertClass = action.payload.alertClass;
       alert.resolved = false;
+    },
+
+    alertResolved: (alert, action) => {
+      alert.resolved = true;
     },
   },
 });
@@ -21,4 +25,4 @@ const slice = createSlice({
 const reducer = slice.reducer;
 export default reducer;
 
-export const { alertAdded } = slice.actions;
+export const { alertAdded, alertResolved } = slice.actions;

@@ -5,60 +5,65 @@ import "./alert-page.styles.scss";
 
 import AlertList from "../../components/alert-list/alert-list.component.jsx";
 import AlertDetail from "../../components/alert-detail/alert-detail.component.jsx";
+import AlertDetailBlank from "../../components/alert-detail-blank/alert-detail-blank.component.jsx";
 import AlertGeneratorButtons from "../../components/alert-generator-buttons/alert-generator-buttons.component";
 import AlertListFilterButtons from "../../components/alert-list-filter-buttons/alert-list-filter-buttons.component";
 import SearchInput from "../../components/search-input/search-input.component";
+import { useSelector } from "react-redux";
 
-const AlertPage = () => (
-  <Box sx={{ display: "flex-inline" }}>
-    <Box className="alertlist" sx={{ display: "flex" }}>
+export default function AlertPage() {
+  const uiState = useSelector((state) => state.ui);
+  return (
+    <Box sx={{ display: "flex-inline" }}>
+      <Box className="alertlist" sx={{ display: "flex" }}>
+        <Box
+          sx={{
+            display: "flex-inline",
+            flexDirection: "row",
+          }}
+        >
+          <Box
+            sx={{
+              display: "flex",
+            }}
+          >
+            <SearchInput />
+          </Box>
+          <Box
+            sx={{
+              display: "flex",
+            }}
+          >
+            <AlertListFilterButtons />
+          </Box>
+
+          <Box
+            sx={{
+              display: "flex",
+            }}
+          >
+            <AlertList sx={{ dispay: "flex" }} />
+          </Box>
+        </Box>
+
+        <Box sx={{ display: "flex", width: "70%" }}>
+          {uiState.index === -1 ? <AlertDetailBlank /> : <AlertDetail />}
+        </Box>
+      </Box>
       <Box
         sx={{
-          display: "flex-inline",
-          flexDirection: "row",
+          display: "flex",
+          justifyContent: "flex-end",
+          height: 30,
+          position: "absolute",
+          bottom: "2%",
+          right: "2%",
         }}
       >
-        <Box
-          sx={{
-            display: "flex",
-          }}
-        >
-          <SearchInput />
-        </Box>
-        <Box
-          sx={{
-            display: "flex",
-          }}
-        >
-          <AlertListFilterButtons />
-        </Box>
-
-        <Box
-          sx={{
-            display: "flex",
-          }}
-        >
-          <AlertList sx={{ dispay: "flex" }} />
-        </Box>
-      </Box>
-
-      <Box sx={{ display: "flex", width: "70%" }}>
-        <AlertDetail />
+        <AlertGeneratorButtons />
       </Box>
     </Box>
-    <Box
-      sx={{
-        display: "flex",
-        justifyContent: "flex-end",
-        height: 30,
-        position: "absolute",
-        bottom: "2%",
-        right: "2%",
-      }}
-    >
-      <AlertGeneratorButtons />
-    </Box>
-  </Box>
-);
+  );
+}
 
-export default AlertPage;
+// export default AlertPage;

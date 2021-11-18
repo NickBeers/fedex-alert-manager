@@ -41,14 +41,14 @@ const alertGenerator = function () {
     default:
   }
 
-  const isCritical = alertData.levels[getRandomInt(alertData.levels.length)];
+  const critical = alertData.critical[getRandomInt(alertData.critical.length)];
   const location = alertData.location[getRandomInt(alertData.location.length)];
 
   store.dispatch(
     alerts.alertAdded({
       title,
       body: loremIpsum({ random: true })[0],
-      isCritical,
+      critical,
       location,
       alertClass,
     })

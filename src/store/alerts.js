@@ -10,9 +10,9 @@ export const slice = createSlice({
         id: v4(),
         title: action.payload.title,
         body: action.payload.body,
-        isCritical: action.payload.isCritical,
+        critical: action.payload.critical,
         location: action.payload.location,
-        timestamp: new Date(),
+        timestamp: new Date().toString(),
         alertClass: action.payload.alertClass,
         resolved: false,
       });
@@ -25,7 +25,7 @@ export const slice = createSlice({
     },
     alertResolved: (alerts, action) => {
       const index = alerts.findIndex((a) => a.id === action.payload.id);
-      alerts[index].payload.resolved = true;
+      alerts[index].resolved = true;
     },
   },
 });

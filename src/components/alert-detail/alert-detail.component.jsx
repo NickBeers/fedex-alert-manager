@@ -1,13 +1,15 @@
 import * as React from "react";
 import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
+import Stack from "@mui/material/Stack";
 import AlertDetailButtons from "../alert-detail-buttons/alert-detail-buttons.component";
+import moment from "moment";
+
 import { useSelector } from "react-redux";
 
 export default function AlertDetail() {
-  const ui = useSelector((state) => state.ui);
+  const alert = useSelector((state) => state.ui);
 
   return (
     <React.Fragment>
@@ -32,13 +34,16 @@ export default function AlertDetail() {
               flexGrow: "1",
             }}
           >
-            <h1>{ui.title}</h1>
-            <h2>{ui.location}</h2>
+            <h1>{alert.title}</h1>
+            <h2>{alert.location}</h2>
             <h3>
-              {new Date(ui.timestamp).toLocaleDateString()}{" "}
-              {new Date(ui.timestamp).toLocaleTimeString()}
+              <Stack spacing={2} direction="row">
+                <span>{new Date(alert.timestamp).toLocaleDateString()}</span>
+                <span>{new Date(alert.timestamp).toLocaleTimeString()}</span>
+                <span>{moment(alert.timestamp).fromNow()}</span>
+              </Stack>
             </h3>
-            <p>{ui.body}</p>
+            <p>{alert.body}</p>
           </Box>
           <Box
             sx={{
