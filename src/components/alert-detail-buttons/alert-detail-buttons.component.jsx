@@ -12,11 +12,19 @@ const resolveAlert = (event, alertState, alertsList) => {
   const currentIdx = alertState.index;
   const unresolvedAlerts = alertsList
     .filter((a) => !a.resolved)
+    .filter(
+      (a) =>
+        a.title.toLowerCase().includes(alertState.search.toLowerCase()) ||
+        a.body.toLowerCase().includes(alertState.search.toLowerCase()) ||
+        new Date(a.timestamp)
+          .toLocaleDateString()
+          .includes(alertState.search) ||
+        new Date(a.timestamp).toLocaleTimeString().includes(alertState.search)
+    )
     .filter((a) =>
       alertState.filter === "all" ? a : a.alertClass === alertState.filter
     )
-
-    .filter((a) => a.index != currentIdx)
+    .filter((a) => a.index !== currentIdx)
     .sort((a, b) => (a.critical === b.critical ? 0 : b.critical ? 1 : -1));
   const alertsLength = unresolvedAlerts.length;
 
@@ -27,7 +35,7 @@ const resolveAlert = (event, alertState, alertsList) => {
         index: currentIdx,
       })
     );
-  } else if (currentIdx == alertsLength - 1) {
+  } else if (currentIdx === alertsLength - 1) {
     store.dispatch(
       ui.alertSelected({
         ...unresolvedAlerts[currentIdx - 1],
@@ -57,8 +65,17 @@ export default function AlertDetailButtons({ title }) {
 
   return (
     <Stack spacing={2} direction="row">
-      <Button>Comment</Button>
-      <Button onClick={(event) => resolveAlert(event, uiState, alertsList)}>
+      <Button
+        variant="outlined"
+        sx={{ color: "gray", border: "1px solid gray" }}
+      >
+        Comment
+      </Button>
+      <Button
+        variant="outlined"
+        onClick={(event) => resolveAlert(event, uiState, alertsList)}
+        sx={{ color: "gray", border: "1px solid gray" }}
+      >
         Resolve
       </Button>
     </Stack>

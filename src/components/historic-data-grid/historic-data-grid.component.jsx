@@ -40,7 +40,6 @@ export default function HistoricDataGrid() {
   return (
     <div
       style={{
-        height: 400,
         width: "80%",
         marginLeft: "10%",
         marginTop: "3%",

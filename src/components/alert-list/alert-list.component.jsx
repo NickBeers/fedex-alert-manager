@@ -34,6 +34,8 @@ const avatarImage = (alertClass, critical) => {
     case "staff":
       if (critical) return staffCritical;
       return staff;
+    default:
+      break;
   }
 };
 
