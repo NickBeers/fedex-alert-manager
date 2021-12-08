@@ -102,6 +102,8 @@ const AlertList = function () {
                     variant="round"
                   />
                 </ListItemIcon>
+
+                <ListItemText primary={alert.title} />
                 {alert.critical ? (
                   <ListItemIcon>
                     <Icon
@@ -112,8 +114,6 @@ const AlertList = function () {
                     />
                   </ListItemIcon>
                 ) : null}
-
-                <ListItemText primary={alert.title} />
               </ListItemButton>,
             ];
           })}
