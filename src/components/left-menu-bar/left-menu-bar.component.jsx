@@ -25,6 +25,7 @@ import MyRoutes from "../../routes/routes.jsx";
 
 import avatar from "../../assets/Avatar.png";
 import fedex from "../../assets/FedExPurpleOrange.png";
+import AlertGeneratorButtons from "../alert-generator-buttons/alert-generator-buttons.component.jsx";
 
 import "./left-menu-bar.styles.scss";
 
@@ -118,15 +119,7 @@ export default function LeftMenuBar() {
                 transform: "translateX(-50%)",
               }}
             >
-              <Avatar
-                alt="Fedex"
-                src={fedex}
-                variant="square"
-                sx={{
-                  height: 45,
-                  width: 100,
-                }}
-              />
+              <AlertGeneratorButtons />
             </Box>
             <Box
               direction="row"
