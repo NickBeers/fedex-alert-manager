@@ -26,6 +26,8 @@ import MyRoutes from "../../routes/routes.jsx";
 import avatar from "../../assets/Avatar.png";
 import fedex from "../../assets/FedExPurpleOrange.png";
 
+import "./left-menu-bar.styles.scss";
+
 const drawerWidth = 240;
 
 const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })(
@@ -91,7 +93,10 @@ export default function LeftMenuBar() {
     >
       <CssBaseline />
       <Stack direction="row">
-        <AppBar open={open} sx={{ backgroundColor: "#8429F8" }}>
+        <AppBar
+          open={open}
+          sx={{ display: "flex", backgroundColor: "#8429F8" }}
+        >
           <Toolbar>
             <Box sx={{ flex: "0 1 auto" }}>
               <IconButton
@@ -131,13 +136,14 @@ export default function LeftMenuBar() {
                 marginLeft: "auto",
               }}
             >
-              <Typography
-                variant="h6"
-                component="div"
-                sx={{ width: "140px", marginRight: "1px", marginTop: "6%" }}
+              <Box
+                // variant="h6"
+                // component="div"
+                className="location-text"
+                // sx={{ width: "140px", marginRight: "1px", marginTop: "6%" }}
               >
-                Memphis, TN
-              </Typography>
+                <h3>Memphis, TN</h3>
+              </Box>
 
               <IconButton>
                 <Avatar
