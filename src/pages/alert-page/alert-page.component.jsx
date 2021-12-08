@@ -18,7 +18,7 @@ export default function AlertPage() {
   console.log(width);
   return (
     <Box className="alert-page">
-      {width < 641 ? (
+      {width < 961 ? (
         uiState.index === -1 ? (
           <Box className="alert-page-list-container">
             <Box className="alert-page-search-input">

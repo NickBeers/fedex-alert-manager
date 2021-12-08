@@ -8,6 +8,8 @@ import AlertDetailButtons from "../alert-detail-buttons/alert-detail-buttons.com
 import IconButton from "@mui/material/IconButton";
 import moment from "moment";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
+import { Icon } from "@iconify/react";
+import alertCircle from "@iconify/icons-ion/alert-circle";
 
 import useWindowDimensions from "../../hooks/get-window-dimentions.jsx";
 import "./alert-detail.styles.scss";
@@ -30,7 +32,7 @@ export default function AlertDetail() {
   return (
     <React.Fragment>
       <CssBaseline />
-      {width < 641 ? (
+      {width < 961 ? (
         <Box sx={{ flex: "0 1 auto" }}>
           <IconButton
             color="inherit"
@@ -42,6 +44,15 @@ export default function AlertDetail() {
         </Box>
       ) : null}
       <Box className="alert-detail-container">
+        {alert.critical ? (
+          <Icon
+            className="alert-icon"
+            icon={alertCircle}
+            color="red"
+            width="64"
+            height="64"
+          />
+        ) : null}
         <Box className="alert-detail-body">
           <h1>{alert.title}</h1>
           <h2>{alert.location}</h2>

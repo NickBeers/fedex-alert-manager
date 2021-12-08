@@ -10,6 +10,8 @@ import Box from "@mui/material/Box";
 import { useSelector } from "react-redux";
 import store from "../../store/configureStore";
 import * as ui from "../../store/ui.js";
+import { Icon } from "@iconify/react";
+import alertCircle from "@iconify/icons-ion/alert-circle";
 
 import weather from "../../assets/weatherDarkGrey.png";
 import volume from "../../assets/volumeDarkGrey.png";
@@ -26,16 +28,16 @@ import "./alert-list.styles.scss";
 const avatarImage = (alertClass, critical) => {
   switch (alertClass) {
     case "weather":
-      if (critical) return weatherCritical;
+      // if (critical) return weatherCritical;
       return weather;
     case "timing":
-      if (critical) return timingCritical;
+      // if (critical) return timingCritical;
       return timing;
     case "volume":
-      if (critical) return volumeCritical;
+      // if (critical) return volumeCritical;
       return volume;
     case "staff":
-      if (critical) return staffCritical;
+      // if (critical) return staffCritical;
       return staff;
     default:
       break;
@@ -43,8 +45,8 @@ const avatarImage = (alertClass, critical) => {
 };
 
 const alertBgColor = (critical) => {
-  if (critical) return "#FAA0A0";
-  else return "";
+  // if (critical) return "#FAA0A0";
+  return "";
 };
 
 const AlertList = function () {
@@ -100,6 +102,17 @@ const AlertList = function () {
                     variant="round"
                   />
                 </ListItemIcon>
+                {alert.critical ? (
+                  <ListItemIcon>
+                    <Icon
+                      icon={alertCircle}
+                      color="red"
+                      width="24"
+                      height="24"
+                    />
+                  </ListItemIcon>
+                ) : null}
+
                 <ListItemText primary={alert.title} />
               </ListItemButton>,
             ];
