@@ -103,7 +103,7 @@ const AlertList = function () {
                   />
                 </ListItemIcon>
 
-                <ListItemText primary={alert.title} />
+                <ListItemText primary={alert.title.substring(0, 40)} />
                 {alert.critical ? (
                   <ListItemIcon>
                     <Icon
