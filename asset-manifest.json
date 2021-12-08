@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/fedex-alert-manager/static/css/main.f0479184.chunk.css",
-    "main.js": "/fedex-alert-manager/static/js/main.2e013f3f.chunk.js",
-    "main.js.map": "/fedex-alert-manager/static/js/main.2e013f3f.chunk.js.map",
-    "runtime-main.js": "/fedex-alert-manager/static/js/runtime-main.fadd5127.js",
-    "runtime-main.js.map": "/fedex-alert-manager/static/js/runtime-main.fadd5127.js.map",
-    "static/js/2.660f577f.chunk.js": "/fedex-alert-manager/static/js/2.660f577f.chunk.js",
-    "static/js/2.660f577f.chunk.js.map": "/fedex-alert-manager/static/js/2.660f577f.chunk.js.map",
-    "static/js/3.7dfde8f2.chunk.js": "/fedex-alert-manager/static/js/3.7dfde8f2.chunk.js",
-    "static/js/3.7dfde8f2.chunk.js.map": "/fedex-alert-manager/static/js/3.7dfde8f2.chunk.js.map",
+    "main.css": "/fedex-alert-manager/static/css/main.cf01e1e4.chunk.css",
+    "main.js": "/fedex-alert-manager/static/js/main.82ae75e5.chunk.js",
+    "main.js.map": "/fedex-alert-manager/static/js/main.82ae75e5.chunk.js.map",
+    "runtime-main.js": "/fedex-alert-manager/static/js/runtime-main.45660110.js",
+    "runtime-main.js.map": "/fedex-alert-manager/static/js/runtime-main.45660110.js.map",
+    "static/js/2.e93703c0.chunk.js": "/fedex-alert-manager/static/js/2.e93703c0.chunk.js",
+    "static/js/2.e93703c0.chunk.js.map": "/fedex-alert-manager/static/js/2.e93703c0.chunk.js.map",
+    "static/js/3.f25c3a3f.chunk.js": "/fedex-alert-manager/static/js/3.f25c3a3f.chunk.js",
+    "static/js/3.f25c3a3f.chunk.js.map": "/fedex-alert-manager/static/js/3.f25c3a3f.chunk.js.map",
     "index.html": "/fedex-alert-manager/index.html",
-    "static/css/main.f0479184.chunk.css.map": "/fedex-alert-manager/static/css/main.f0479184.chunk.css.map",
-    "static/js/2.660f577f.chunk.js.LICENSE.txt": "/fedex-alert-manager/static/js/2.660f577f.chunk.js.LICENSE.txt"
+    "static/css/main.cf01e1e4.chunk.css.map": "/fedex-alert-manager/static/css/main.cf01e1e4.chunk.css.map",
+    "static/js/2.e93703c0.chunk.js.LICENSE.txt": "/fedex-alert-manager/static/js/2.e93703c0.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.fadd5127.js",
-    "static/js/2.660f577f.chunk.js",
-    "static/css/main.f0479184.chunk.css",
-    "static/js/main.2e013f3f.chunk.js"
+    "static/js/runtime-main.45660110.js",
+    "static/js/2.e93703c0.chunk.js",
+    "static/css/main.cf01e1e4.chunk.css",
+    "static/js/main.82ae75e5.chunk.js"
   ]
 }
