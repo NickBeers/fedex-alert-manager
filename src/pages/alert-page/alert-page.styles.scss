@@ -1,0 +1,40 @@
+.alert-page {
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1%;
+}
+
+.alert-page-container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  // padding: 1%;
+}
+
+.alert-page-list {
+  height: 100%;
+}
+
+.alert-page-search-input {
+}
+
+.alert-page-filter-buttons {
+}
+
+.alert-page-list-container {
+  flex: 1;
+}
+
+.alert-page-detail {
+  flex: 4;
+  min-height: 400px;
+}
+
+.alertPageGeneratorButton {
+  display: flex;
+  justify-content: flex-end;
+  height: 30px;
+  bottom: 4%;
+  right: 2%;
+}

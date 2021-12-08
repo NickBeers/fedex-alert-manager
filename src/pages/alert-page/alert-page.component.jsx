@@ -14,56 +14,28 @@ import { useSelector } from "react-redux";
 export default function AlertPage() {
   const uiState = useSelector((state) => state.ui);
   return (
-    <Box sx={{ display: "flex-inline" }}>
-      <Box className="alertlist" sx={{ display: "flex" }}>
-        <Box
-          sx={{
-            display: "flex-inline",
-            flexDirection: "row",
-          }}
-        >
-          <Box
-            sx={{
-              display: "flex",
-            }}
-          >
+    <Box className="alert-page">
+      <Box className="alert-page-container">
+        <Box className="alert-page-list-container">
+          <Box className="alert-page-search-input">
             <SearchInput />
           </Box>
-          <Box
-            sx={{
-              display: "flex",
-            }}
-          >
+          <Box className="alert-page-filter-buttons">
             <AlertListFilterButtons />
           </Box>
 
-          <Box
-            sx={{
-              display: "flex",
-            }}
-          >
-            <AlertList sx={{ dispay: "flex" }} />
+          <Box className="alert-page-list">
+            <AlertList />
           </Box>
         </Box>
 
-        <Box sx={{ display: "flex", width: "70%" }}>
+        <Box className="alert-page-detail">
           {uiState.index === -1 ? <AlertDetailBlank /> : <AlertDetail />}
         </Box>
       </Box>
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "flex-end",
-          height: 30,
-          position: "absolute",
-          bottom: "2%",
-          right: "2%",
-        }}
-      >
+      <Box className="alertPageGeneratorButton">
         <AlertGeneratorButtons />
       </Box>
     </Box>
   );
 }
-
-// export default AlertPage;

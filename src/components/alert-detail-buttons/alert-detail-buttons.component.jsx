@@ -7,6 +7,8 @@ import store from "../../store/configureStore";
 import * as alerts from "../../store/alerts.js";
 import * as ui from "../../store/ui.js";
 
+import "./alert-detail-buttons.styles.scss";
+
 const resolveAlert = (event, alertState, alertsList) => {
   // If alertList has an alert, change the current alert display
   const currentIdx = alertState.index;

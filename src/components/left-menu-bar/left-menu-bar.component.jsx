@@ -16,6 +16,7 @@ import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MailIcon from "@material-ui/icons/Mail";
+import Stack from "@mui/material/Stack";
 import Avatar from "@mui/material/Avatar";
 
 import { Link } from "react-router-dom";
@@ -64,12 +65,9 @@ const AppBar = styled(MuiAppBar, {
 }));
 
 const DrawerHeader = styled("div")(({ theme }) => ({
-  display: "flex",
-  alignItems: "center",
   padding: theme.spacing(0, 1),
   // necessary for content to be below app bar
   ...theme.mixins.toolbar,
-  justifyContent: "flex-end",
 }));
 
 export default function LeftMenuBar() {
@@ -85,50 +83,77 @@ export default function LeftMenuBar() {
   };
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box
+      sx={{
+        display: "flex",
+        position: "relative",
+      }}
+    >
       <CssBaseline />
-      <AppBar position="fixed" open={open} sx={{ backgroundColor: "#8429F8" }}>
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            onClick={handleDrawerOpen}
-            edge="start"
-            sx={{ mr: 2, ...(open && { display: "none" }) }}
-          >
-            <MenuIcon />
-          </IconButton>
+      <Stack direction="row">
+        <AppBar open={open} sx={{ backgroundColor: "#8429F8" }}>
+          <Toolbar>
+            <Box sx={{ flex: "0 1 auto" }}>
+              <IconButton
+                color="inherit"
+                aria-label="open drawer"
+                onClick={handleDrawerOpen}
+                edge="start"
+                sx={{ mr: 2, ...(open && { display: "none" }) }}
+              >
+                <MenuIcon />
+              </IconButton>
+            </Box>
+            <Box
+              sx={{
+                flex: "0 1 auto",
+                marginTop: "1%",
+                position: "absolute",
+                left: "50%",
+                transform: "translateX(-50%)",
+              }}
+            >
+              <Avatar
+                alt="Fedex"
+                src={fedex}
+                variant="square"
+                sx={{
+                  height: 45,
+                  width: 100,
+                }}
+              />
+            </Box>
+            <Box
+              direction="row"
+              sx={{
+                display: "flex",
+                flex: "0 1 auto",
+                marginLeft: "auto",
+              }}
+            >
+              <Typography
+                variant="h6"
+                component="div"
+                sx={{ width: "140px", marginRight: "1px", marginTop: "6%" }}
+              >
+                Memphis, TN
+              </Typography>
 
-          <Avatar
-            alt="Fedex"
-            src={fedex}
-            variant="square"
-            sx={{
-              height: 45,
-              width: 100,
-              marginTop: "1%",
-              marginLeft: "45%",
-            }}
-          />
-
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ marginLeft: "32%", marginRight: "1%" }}
-          >
-            Memphis, TN
-          </Typography>
-
-          <IconButton>
-            <Avatar
-              alt="FedEx"
-              src={avatar}
-              sx={{ width: 45, height: 45, marginRight: "1%" }}
-              variant="round"
-            />
-          </IconButton>
-        </Toolbar>
-      </AppBar>
+              <IconButton>
+                <Avatar
+                  alt="Profile"
+                  src={avatar}
+                  variant="round"
+                  sx={{
+                    width: 45,
+                    height: 45,
+                  }}
+                />
+              </IconButton>
+            </Box>
+          </Toolbar>
+        </AppBar>
+      </Stack>
       <Drawer
         sx={{
           width: drawerWidth,

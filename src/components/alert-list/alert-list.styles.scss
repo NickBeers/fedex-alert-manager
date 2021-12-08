@@ -1,0 +1,22 @@
+.alert-list-container {
+  height: 100%;
+  overflow: auto;
+  display: flex;
+  border: 1px solid;
+}
+
+.alert-list {
+  flex-direction: column;
+  // display: flex;
+  // height: 75vh;
+  min-width: 100%;
+}
+
+.alert-list-item-button {
+  height: 60px;
+}
+
+.alert-list-item-icon {
+  width: 25;
+  height: 25;
+}

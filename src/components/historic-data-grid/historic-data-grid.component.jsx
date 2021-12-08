@@ -38,20 +38,16 @@ export default function HistoricDataGrid() {
   const alerts = useSelector((state) => state.alerts);
   console.log(alerts);
   return (
-    <div
-      style={{
-        width: "80%",
-        marginLeft: "10%",
-        marginTop: "3%",
-        height: "70vh",
-      }}
-    >
+    <div className="history-container">
+      <div className="history-header">
+        <h3>Historic Alerts</h3>
+      </div>
       <DataGrid
         rows={alerts.filter((a) => a.resolved)}
         columns={columns}
-        pageSize={50}
+        pageSize={100}
         bulkActionButtons={false}
-        // rowsPerPageOptions={[100]}
+        rowsPerPageOptions={[100]}
         disableSelectionOnClick
       />
     </div>

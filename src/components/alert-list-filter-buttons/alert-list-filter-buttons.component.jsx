@@ -1,16 +1,26 @@
 import React from "react";
 import Stack from "@mui/material/Stack";
-import IconButton from "@mui/material/IconButton";
 import Avatar from "@mui/material/Avatar";
+import Box from "@mui/material/Box";
 import Tooltip from "@mui/material/Tooltip";
-import staff from "../../assets/StaffIcon.png";
-import timing from "../../assets/TimeIcon.png";
-import volume from "../../assets/VolumeIcon.png";
-import weather from "../../assets/WeatherIcon.png";
-import listul from "../../assets/listul.png";
+
 import { useSelector } from "react-redux";
 import store from "../../store/configureStore";
 import * as ui from "../../store/ui.js";
+
+import staffSelected from "../../assets/staffWhite.png";
+import timingSelected from "../../assets/timingWhite.png";
+import volumeSelected from "../../assets/volumeWhite.png";
+import weatherSelected from "../../assets/weatherWhite.png";
+import allSelected from "../../assets/allWhite.png";
+
+import staff from "../../assets/staffDarkGrey.png";
+import timing from "../../assets/timingDarkGrey.png";
+import volume from "../../assets/volumeDarkGrey.png";
+import weather from "../../assets/weatherDarkGrey.png";
+import all from "../../assets/allDarkGrey.png";
+
+import "./alert-list-filter-buttons.styles.scss";
 
 export default function AlertListFilterButtons() {
   const uiState = useSelector((state) => state.ui);
@@ -59,107 +69,56 @@ export default function AlertListFilterButtons() {
   };
 
   return (
-    <Stack
-      direction="row"
-      sx={{
-        backgroundColor: "#8429F8",
-        marginBottom: "3%",
-        width: "100%",
-        height: 50,
-      }}
-    >
+    <Stack direction="row" className="alert-button-container">
       <Tooltip title="All Alerts">
-        <IconButton
-          onClick={filterAlerts}
-          sx={{
-            width: 25,
-            height: 25,
-            top: "12px",
-            left: "5%",
-          }}
-        >
+        <Box className="alert-list-button" onClick={filterAlerts}>
           <Avatar
             alt="all"
-            src={listul}
+            src={uiState.filter === "all" ? allSelected : all}
             sx={{ width: 25, height: 25 }}
-            variant="round"
+            variant="square"
           />
-        </IconButton>
+        </Box>
       </Tooltip>
       <Tooltip title="Volume Alerts">
-        <IconButton
-          onClick={filterAlerts}
-          sx={{
-            width: 25,
-            height: 25,
-            top: "12px",
-            left: "18%",
-          }}
-        >
+        <Box className="alert-list-button" onClick={filterAlerts}>
           <Avatar
             alt="volume"
-            src={volume}
+            src={uiState.filter === "volume" ? volumeSelected : volume}
             sx={{ width: 25, height: 25 }}
             variant="round"
           />
-        </IconButton>
+        </Box>
       </Tooltip>
       <Tooltip title="Staff Alerts">
-        <IconButton
-          onClick={filterAlerts}
-          sx={{
-            width: 25,
-            height: 25,
-            top: "12px",
-            left: "32%",
-            title: "Staff Alerts",
-          }}
-        >
+        <Box onClick={filterAlerts} className="alert-list-button">
           <Avatar
             alt="staff"
-            src={staff}
+            src={uiState.filter === "staff" ? staffSelected : staff}
             sx={{ width: 25, height: 25 }}
             variant="round"
           />
-        </IconButton>
+        </Box>
       </Tooltip>
       <Tooltip title="Timing Alerts">
-        <IconButton
-          onClick={filterAlerts}
-          sx={{
-            width: 25,
-            height: 25,
-            top: "12px",
-            left: "43%",
-            title: "Timing Alerts",
-          }}
-        >
+        <Box onClick={filterAlerts} className="alert-list-button">
           <Avatar
             alt="timing"
-            src={timing}
+            src={uiState.filter === "timing" ? timingSelected : timing}
             sx={{ width: 25, height: 25 }}
             variant="round"
           />
-        </IconButton>
+        </Box>
       </Tooltip>
       <Tooltip title="Weather Alerts">
-        <IconButton
-          onClick={filterAlerts}
-          sx={{
-            width: 25,
-            height: 25,
-            top: "12px",
-            left: "55%",
-            title: "Weather Alerts",
-          }}
-        >
+        <Box onClick={filterAlerts} className="alert-list-button">
           <Avatar
             alt="weather"
-            src={weather}
+            src={uiState.filter === "weather" ? weatherSelected : weather}
             sx={{ width: 25, height: 25 }}
             variant="round"
           />
-        </IconButton>
+        </Box>
       </Tooltip>
     </Stack>
   );

@@ -81,7 +81,7 @@ const SearchInput = function () {
     <TextField
       onChange={clearButton}
       onChange={debounce(handleChange, 250)}
-      sx={{ width: "380px", marginBottom: "3%" }}
+      sx={{ width: "100%", marginBottom: "3%" }}
       label="Search"
       InputProps={{
         endAdornment: (
