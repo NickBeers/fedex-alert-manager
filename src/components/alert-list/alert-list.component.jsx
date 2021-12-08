@@ -103,7 +103,13 @@ const AlertList = function () {
                   />
                 </ListItemIcon>
 
-                <ListItemText primary={alert.title.substring(0, 40)} />
+                <ListItemText
+                  primary={
+                    alert.title.length > 40
+                      ? alert.title.substring(0, 40) + "..."
+                      : alert.title
+                  }
+                />
                 {alert.critical ? (
                   <ListItemIcon>
                     <Icon
