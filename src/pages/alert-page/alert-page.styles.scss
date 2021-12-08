@@ -113,10 +113,47 @@
     height: 75vh;
   }
 }
+
+@media (min-width: 961px) {
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
+  .alert-page-list-container {
+    flex: 1;
+  }
+
+  .alert-page-detail {
+    flex: 1;
+    // min-height: 400px;
+  }
+}
+
 @media (max-width: 1025px) {
   /* big landscape tablets, laptops, and desktops */
   .alert-page-list-container {
-    flex: 2;
+    flex: 1;
+  }
+
+  .alert-page-detail {
+    flex: 1;
+    // min-height: 400px;
+  }
+}
+
+@media (max-width: 1025px) {
+  /* big landscape tablets, laptops, and desktops */
+  .alert-page-list-container {
+    flex: 1;
+  }
+
+  .alert-page-detail {
+    flex: 1;
+    // min-height: 400px;
+  }
+}
+
+@media (max-width: 1281px) {
+  /* hi-res laptops and desktops */
+  .alert-page-list-container {
+    flex: 1;
   }
 
   .alert-page-detail {
@@ -124,14 +161,15 @@
     min-height: 400px;
   }
 }
-@media (max-width: 1281px) {
+
+@media (min-width: 1281px) {
   /* hi-res laptops and desktops */
   .alert-page-list-container {
-    flex: 2;
+    flex: 1;
   }
 
   .alert-page-detail {
-    flex: 5;
+    flex: 3;
     min-height: 400px;
   }
 }

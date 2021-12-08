@@ -39,7 +39,7 @@ export default function HistoricDataGrid() {
   console.log(alerts);
   return (
     <div className="history-container">
-      <div className="history-header">
+      <div className="history-title">
         <h3>Historic Alerts</h3>
       </div>
       <DataGrid
