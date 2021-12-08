@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/fedex-alert-manager/static/css/main.cf01e1e4.chunk.css",
-    "main.js": "/fedex-alert-manager/static/js/main.82ae75e5.chunk.js",
-    "main.js.map": "/fedex-alert-manager/static/js/main.82ae75e5.chunk.js.map",
+    "main.css": "/fedex-alert-manager/static/css/main.d2fac348.chunk.css",
+    "main.js": "/fedex-alert-manager/static/js/main.4f82b602.chunk.js",
+    "main.js.map": "/fedex-alert-manager/static/js/main.4f82b602.chunk.js.map",
     "runtime-main.js": "/fedex-alert-manager/static/js/runtime-main.45660110.js",
     "runtime-main.js.map": "/fedex-alert-manager/static/js/runtime-main.45660110.js.map",
-    "static/js/2.e93703c0.chunk.js": "/fedex-alert-manager/static/js/2.e93703c0.chunk.js",
-    "static/js/2.e93703c0.chunk.js.map": "/fedex-alert-manager/static/js/2.e93703c0.chunk.js.map",
+    "static/js/2.84f086aa.chunk.js": "/fedex-alert-manager/static/js/2.84f086aa.chunk.js",
+    "static/js/2.84f086aa.chunk.js.map": "/fedex-alert-manager/static/js/2.84f086aa.chunk.js.map",
     "static/js/3.f25c3a3f.chunk.js": "/fedex-alert-manager/static/js/3.f25c3a3f.chunk.js",
     "static/js/3.f25c3a3f.chunk.js.map": "/fedex-alert-manager/static/js/3.f25c3a3f.chunk.js.map",
     "index.html": "/fedex-alert-manager/index.html",
-    "static/css/main.cf01e1e4.chunk.css.map": "/fedex-alert-manager/static/css/main.cf01e1e4.chunk.css.map",
-    "static/js/2.e93703c0.chunk.js.LICENSE.txt": "/fedex-alert-manager/static/js/2.e93703c0.chunk.js.LICENSE.txt"
+    "static/css/main.d2fac348.chunk.css.map": "/fedex-alert-manager/static/css/main.d2fac348.chunk.css.map",
+    "static/js/2.84f086aa.chunk.js.LICENSE.txt": "/fedex-alert-manager/static/js/2.84f086aa.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.45660110.js",
-    "static/js/2.e93703c0.chunk.js",
-    "static/css/main.cf01e1e4.chunk.css",
-    "static/js/main.82ae75e5.chunk.js"
+    "static/js/2.84f086aa.chunk.js",
+    "static/css/main.d2fac348.chunk.css",
+    "static/js/main.4f82b602.chunk.js"
   ]
 }
