@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/fedex-alert-manager/static/css/main.e18ce17d.chunk.css",
-    "main.js": "/fedex-alert-manager/static/js/main.14ada7b4.chunk.js",
-    "main.js.map": "/fedex-alert-manager/static/js/main.14ada7b4.chunk.js.map",
+    "main.css": "/fedex-alert-manager/static/css/main.f163c9b7.chunk.css",
+    "main.js": "/fedex-alert-manager/static/js/main.57857dd0.chunk.js",
+    "main.js.map": "/fedex-alert-manager/static/js/main.57857dd0.chunk.js.map",
     "runtime-main.js": "/fedex-alert-manager/static/js/runtime-main.5cabaeb0.js",
     "runtime-main.js.map": "/fedex-alert-manager/static/js/runtime-main.5cabaeb0.js.map",
     "static/js/2.162f55ec.chunk.js": "/fedex-alert-manager/static/js/2.162f55ec.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.0677ae2d.chunk.js": "/fedex-alert-manager/static/js/3.0677ae2d.chunk.js",
     "static/js/3.0677ae2d.chunk.js.map": "/fedex-alert-manager/static/js/3.0677ae2d.chunk.js.map",
     "index.html": "/fedex-alert-manager/index.html",
-    "static/css/main.e18ce17d.chunk.css.map": "/fedex-alert-manager/static/css/main.e18ce17d.chunk.css.map",
+    "static/css/main.f163c9b7.chunk.css.map": "/fedex-alert-manager/static/css/main.f163c9b7.chunk.css.map",
     "static/js/2.162f55ec.chunk.js.LICENSE.txt": "/fedex-alert-manager/static/js/2.162f55ec.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.5cabaeb0.js",
     "static/js/2.162f55ec.chunk.js",
-    "static/css/main.e18ce17d.chunk.css",
-    "static/js/main.14ada7b4.chunk.js"
+    "static/css/main.f163c9b7.chunk.css",
+    "static/js/main.57857dd0.chunk.js"
   ]
 }
