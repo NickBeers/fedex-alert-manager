@@ -8,6 +8,7 @@ import AlertDetail from "../../components/alert-detail/alert-detail.component.js
 import AlertDetailBlank from "../../components/alert-detail-blank/alert-detail-blank.component.jsx";
 import AlertListFilterButtons from "../../components/alert-list-filter-buttons/alert-list-filter-buttons.component";
 import SearchInput from "../../components/search-input/search-input.component";
+import UndoButton from "../../components/undo-button/undo-button.component";
 import { useSelector } from "react-redux";
 
 import useWindowDimensions from "../../hooks/get-window-dimentions.jsx";
@@ -57,6 +58,10 @@ export default function AlertPage() {
           </Box>
         </Box>
       )}
+
+      <Box className="undo-button">
+        <UndoButton />
+      </Box>
     </Box>
   );
 }

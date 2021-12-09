@@ -27,13 +27,18 @@ export const slice = createSlice({
       const index = alerts.findIndex((a) => a.id === action.payload.id);
       alerts[index].resolved = true;
     },
+    alertUnresolved: (alerts, action) => {
+      const index = alerts.findIndex((a) => a.id === action.payload.id);
+      alerts[index].resolved = false;
+    },
   },
 });
 
 const reducer = slice.reducer;
 export default reducer;
 
-export const { alertAdded, alertDeleted, alertResolved } = slice.actions;
+export const { alertAdded, alertDeleted, alertResolved, alertUnresolved } =
+  slice.actions;
 
 export const getUnresolvedAlerts = (state) =>
   state.alerts.filter((alert) => !alert.resolved);

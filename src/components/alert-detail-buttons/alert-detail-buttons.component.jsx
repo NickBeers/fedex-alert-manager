@@ -59,6 +59,13 @@ const resolveAlert = (event, alertState, alertsList) => {
       id: alertState.id,
     })
   );
+
+  // push resolved alert to undo stack
+  store.dispatch(
+    ui.alertPush({
+      alertStack: alertState.id,
+    })
+  );
 };
 
 export default function AlertDetailButtons({ title }) {

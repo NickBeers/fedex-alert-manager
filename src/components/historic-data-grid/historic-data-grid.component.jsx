@@ -30,7 +30,7 @@ const columns = [
     field: "body",
     headerName: "Body",
     sortable: false,
-    width: 500,
+    width: 700,
   },
 ];
 

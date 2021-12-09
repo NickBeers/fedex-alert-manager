@@ -6,6 +6,7 @@ export const slice = createSlice({
     index: -1,
     filter: "all",
     search: "",
+    alertStack: [],
   },
   reducers: {
     alertSelected: (alert, action) => {
@@ -25,10 +26,17 @@ export const slice = createSlice({
     alertSearch: (ui, action) => {
       ui.search = action.payload.search;
     },
+    alertPush: (ui, action) => {
+      ui.alertStack = [...ui.alertStack, action.payload];
+    },
+    alertPop: (ui, action) => {
+      ui.alertStack.pop();
+    },
   },
 });
 
 const reducer = slice.reducer;
 export default reducer;
 
-export const { alertSelected, alertFilter, alertSearch } = slice.actions;
+export const { alertSelected, alertFilter, alertSearch, alertPush, alertPop } =
+  slice.actions;
