@@ -58,10 +58,17 @@ export default function AlertPage() {
           </Box>
         </Box>
       )}
-
-      <Box className="undo-button">
-        <UndoButton />
-      </Box>
+      {width < 961 ? (
+        uiState.index !== -1 ? null : (
+          <Box className="undo-button">
+            <UndoButton />
+          </Box>
+        )
+      ) : (
+        <Box className="undo-button">
+          <UndoButton />
+        </Box>
+      )}
     </Box>
   );
 }
