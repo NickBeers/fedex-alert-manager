@@ -134,8 +134,8 @@ const AlertList = function () {
                   {moment(alert.timestamp)
                     .fromNow()
                     .replace("ago", "")
-                    .replace("seconds", "s")
-                    .replace("a minute", "<1m")}
+                    .replace("seconds", "<1m")
+                    .replace("a minute", "1m")}
                 </span>
                 {/* {alert.critical ? (
                   <ListItemIcon>
