@@ -28,16 +28,16 @@ import "./alert-list.styles.scss";
 const avatarImage = (alertClass, critical) => {
   switch (alertClass) {
     case "weather":
-      // if (critical) return weatherCritical;
+      if (critical) return weatherCritical;
       return weather;
     case "timing":
-      // if (critical) return timingCritical;
+      if (critical) return timingCritical;
       return timing;
     case "volume":
-      // if (critical) return volumeCritical;
+      if (critical) return volumeCritical;
       return volume;
     case "staff":
-      // if (critical) return staffCritical;
+      if (critical) return staffCritical;
       return staff;
     default:
       break;
@@ -110,7 +110,7 @@ const AlertList = function () {
                       : alert.title
                   }
                 />
-                {alert.critical ? (
+                {/* {alert.critical ? (
                   <ListItemIcon>
                     <Icon
                       icon={alertCircle}
@@ -119,7 +119,7 @@ const AlertList = function () {
                       height="24"
                     />
                   </ListItemIcon>
-                ) : null}
+                ) : null} */}
               </ListItemButton>,
             ];
           })}
