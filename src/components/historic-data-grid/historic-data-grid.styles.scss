@@ -13,7 +13,10 @@
 }
 
 .history-title {
-  margin-left: 45%;
+  margin-left: 40%;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(82, 78, 78);
+  font-size: 40px;
 }
 
 @media (max-width: 961px) {
@@ -29,6 +32,9 @@
   }
 
   .history-title {
-    margin-left: 35%;
+    margin-left: 20%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(82, 78, 78);
+    font-size: 40px;
   }
 }

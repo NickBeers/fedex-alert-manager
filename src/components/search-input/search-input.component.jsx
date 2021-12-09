@@ -58,12 +58,19 @@ const SearchInput = function () {
     }
   };
 
+  const handleLoad = (event) => {
+    event.target.value = uiState.search === "" ? "" : uiState.search;
+  };
+
   return (
     <input
       className="search-input"
       type="search"
       onChange={debounce(handleChange, 250)}
+      onLoadStart={handleLoad}
+      // value={uiState.search}
       placeholder="Search Alerts"
+      // value={uiState.search === "" ? null : uiState.search}
     />
   );
 };

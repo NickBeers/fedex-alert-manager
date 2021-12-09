@@ -16,7 +16,7 @@ import useWindowDimensions from "../../hooks/get-window-dimentions.jsx";
 export default function AlertPage() {
   const uiState = useSelector((state) => state.ui);
   const { height, width } = useWindowDimensions();
-  console.log(width);
+
   return (
     <Box className="alert-page">
       {width < 961 ? (

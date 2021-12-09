@@ -39,8 +39,8 @@ export default function HistoricDataGrid() {
   console.log(alerts);
   return (
     <div className="history-container">
-      <div className="history-title">
-        <h3>Historic Alerts</h3>
+      <div>
+        <h3 className="history-title">Historic Alerts</h3>
       </div>
       <DataGrid
         rows={alerts.filter((a) => a.resolved)}
