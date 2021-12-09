@@ -9,6 +9,7 @@ import Avatar from "@mui/material/Avatar";
 import Box from "@mui/material/Box";
 import { useSelector } from "react-redux";
 import store from "../../store/configureStore";
+import moment from "moment";
 import * as ui from "../../store/ui.js";
 import { Icon } from "@iconify/react";
 import alertCircle from "@iconify/icons-ion/alert-circle";
@@ -24,6 +25,25 @@ import timingCritical from "../../assets/timingRed.png";
 import staffCritical from "../../assets/staffRed.png";
 
 import "./alert-list.styles.scss";
+
+moment.locale("en", {
+  relativeTime: {
+    future: "in %s",
+    past: "%s ago",
+    s: "seconds",
+    ss: "%ss",
+    m: "a minute",
+    mm: "%dm",
+    h: "an hour",
+    hh: "%dh",
+    d: "a day",
+    dd: "%dd",
+    M: "a month",
+    MM: "%dM",
+    y: "a year",
+    yy: "%dY",
+  },
+});
 
 const avatarImage = (alertClass, critical) => {
   switch (alertClass) {
@@ -110,6 +130,13 @@ const AlertList = function () {
                       : alert.title
                   }
                 />
+                <span className="alert-time">
+                  {moment(alert.timestamp)
+                    .fromNow()
+                    .replace("ago", "")
+                    .replace("seconds", "s")
+                    .replace("a minute", "<1m")}
+                </span>
                 {/* {alert.critical ? (
                   <ListItemIcon>
                     <Icon
