@@ -46,8 +46,13 @@ export default function AlertDetail() {
       <Box className="alert-detail-container">
         <Box className="alert-detail-body">
           <Box className="title-and-icon">
-            <h1 className="alert-title">{alert.title}</h1>
+            {/* <h1 className="alert-title">{alert.title}</h1> */}
             {alert.critical ? (
+              <h1 className="alert-title-red">{alert.title}</h1>
+            ) : (
+              <h1 className="alert-title">{alert.title}</h1>
+            )}
+            {/* {alert.critical ? (
               <Icon
                 className="alert-icon"
                 icon={alertCircle}
@@ -55,7 +60,7 @@ export default function AlertDetail() {
                 width="64"
                 height="64"
               />
-            ) : null}
+            ) : null} */}
           </Box>
           <h2 className="alert-location">{alert.location}</h2>
 
