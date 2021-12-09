@@ -5,9 +5,10 @@
 
 .location-text {
   display: flex;
-  width: 140px;
-  margin-right: 1px;
-  font-size: medium;
+  width: 130px;
+  font-size: 18px;
+  font-weight: 1;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 @media (max-width: 641px) {

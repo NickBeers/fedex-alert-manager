@@ -1,14 +1,12 @@
 // imports
-import IconButton from "@mui/material/IconButton";
-import InputAdornment from "@material-ui/core/InputAdornment";
-import SearchIcon from "@material-ui/icons/Search";
-import TextField from "@mui/material/TextField";
-import ClearIcon from "@material-ui/icons/Clear";
+import React from "react";
 import { useSelector } from "react-redux";
 import { debounce } from "lodash";
 
 import store from "../../store/configureStore";
 import * as ui from "../../store/ui.js";
+
+import "./search-input.styles.scss";
 
 // render
 const SearchInput = function () {
@@ -60,38 +58,12 @@ const SearchInput = function () {
     }
   };
 
-  const clearButton = (event) => {
-    console.log(event);
-    store.dispatch(
-      ui.alertSearch({
-        search: "",
-      })
-    );
-  };
-
-  const clearSearch = (event) => {
-    store.dispatch(
-      ui.alertSearch({
-        search: "",
-      })
-    );
-  };
-
   return (
-    <TextField
-      onChange={clearButton}
+    <input
+      className="search-input"
+      type="search"
       onChange={debounce(handleChange, 250)}
-      sx={{ width: "100%", marginBottom: "3%" }}
-      label="Search"
-      InputProps={{
-        endAdornment: (
-          <InputAdornment position="start">
-            <IconButton>
-              {uiState.search === "" ? <SearchIcon /> : <ClearIcon />}
-            </IconButton>
-          </InputAdornment>
-        ),
-      }}
+      placeholder="Search Alerts"
     />
   );
 };

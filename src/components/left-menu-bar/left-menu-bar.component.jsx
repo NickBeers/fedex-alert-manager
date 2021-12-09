@@ -129,13 +129,8 @@ export default function LeftMenuBar() {
                 marginLeft: "auto",
               }}
             >
-              <Box
-                // variant="h6"
-                // component="div"
-                className="location-text"
-                // sx={{ width: "140px", marginRight: "1px", marginTop: "6%" }}
-              >
-                <h3>Memphis, TN</h3>
+              <Box>
+                <h3 className="location-text">Memphis, TN</h3>
               </Box>
 
               <IconButton>

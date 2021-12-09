@@ -44,26 +44,34 @@ export default function AlertDetail() {
         </Box>
       ) : null}
       <Box className="alert-detail-container">
-        {alert.critical ? (
-          <Icon
-            className="alert-icon"
-            icon={alertCircle}
-            color="red"
-            width="64"
-            height="64"
-          />
-        ) : null}
         <Box className="alert-detail-body">
-          <h1>{alert.title}</h1>
-          <h2>{alert.location}</h2>
-          <h3>
-            <Stack spacing={3} direction="row">
-              <span>{new Date(alert.timestamp).toLocaleDateString()}</span>
-              <span>{new Date(alert.timestamp).toLocaleTimeString()}</span>
-              <span>{moment(alert.timestamp).fromNow()}</span>
-            </Stack>
-          </h3>
-          <p>{alert.body}</p>
+          <Box className="title-and-icon">
+            <h1 className="alert-title">{alert.title}</h1>
+            {alert.critical ? (
+              <Icon
+                className="alert-icon"
+                icon={alertCircle}
+                color="red"
+                width="64"
+                height="64"
+              />
+            ) : null}
+          </Box>
+          <h2 className="alert-location">{alert.location}</h2>
+
+          <Stack spacing={3} direction="row">
+            <span className="alert-date">
+              {new Date(alert.timestamp).toLocaleDateString()}
+            </span>
+            <span className="alert-time">
+              {new Date(alert.timestamp).toLocaleTimeString()}
+            </span>
+            <span className="alert-time">
+              {moment(alert.timestamp).fromNow()}
+            </span>
+          </Stack>
+
+          <p className="alert-body">{alert.body}</p>
         </Box>
         <Box className="alert-detail-buttons">
           <AlertDetailButtons />
